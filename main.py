@@ -1,6 +1,11 @@
 from flask import Flask, render_template
 from flask_compress import Compress
+import flask.scaffold
+flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
+import flask_restful
+
 from flask_restful import Api
+
 
 app = Flask(__name__, static_folder='templates/static')
 Compress(app)
