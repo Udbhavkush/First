@@ -20,14 +20,15 @@
 </head>
 
 <body>
-<!--st navigation form from bootstrap -->
 
-<!--end navigation form from bootstrap-->
-<form class="row search">
-    <div class="input-group col-lg-3">
-  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <button type="button" class="btn btn-outline-primary">search</button>
-</div>
-</form>
+    <form class="row search"  action="recommend.html" method="POST">
+        <div class="input-group col-lg-3">
+            <input type="text" name="movie_name" class="form-control rounded" placeholder="Movie" aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-outline-primary">search</button>
+        </div>
+    </form>
+    {% block content %}
+    {% endblock content %}
+
 </body>
 </html>
